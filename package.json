@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 5419",
     "build": "vite build",
     "generate": "vite-ssg build",
     "preview": "vite preview",
@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "element-plus": "^2.2.13",
-    "vue": "^3.2.36"
+    "vue": "^3.2.36",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@iconify-json/ep": "^1.1.4",

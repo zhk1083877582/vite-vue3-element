@@ -1,5 +1,20 @@
 <script lang="ts" setup>
-import { toggleDark } from '~/composables';
+  import { toggleDark } from '@/composables';
+  import { useRouter } from 'vue-router'
+  const router = useRouter()
+
+  function toAbout() {
+    router.push({
+      path: '/about',
+      query: { userId: '123' }
+    })
+  }
+  const toTest = () => {
+    router.push({
+      path: '/test',
+      query: { userId: '123' }
+    })
+  }
 </script>
 
 <template>
@@ -18,10 +33,12 @@ import { toggleDark } from '~/composables';
       </el-sub-menu>
     </el-sub-menu>
     <el-menu-item index="3" disabled>Info</el-menu-item>
-    <el-menu-item index="4">Orders</el-menu-item>
+    <el-menu-item index="4" @click="toAbout()">Orders</el-menu-item>
+    <el-menu-item index="5" @click="toTest()">toTest</el-menu-item>
     <el-menu-item h="full" @click="toggleDark()">
-      <button class="border-none w-full bg-transparent cursor-pointer" style="height: var(--ep-menu-item-height);">
-        <i inline-flex i="dark:ep-moon ep-sunny" />
+      <button class="border-none w-full bg-transparent cursor-pointer"
+        style="height: var(--zhk-menu-item-height);">
+        <i inline-flex i="dark:zhk-moon zhk-sunny" />
       </button>
     </el-menu-item>
   </el-menu>
