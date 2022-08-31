@@ -38,7 +38,7 @@
     <el-menu-item h="full" @click="toggleDark()">
       <button class="border-none w-full bg-transparent cursor-pointer"
         style="height: var(--zhk-menu-item-height);">
-        <i inline-flex i="dark:zhk-moon zhk-sunny" />
+        <i inline-flex i="dark:ep-moon ep-sunny" />
       </button>
     </el-menu-item>
   </el-menu>
